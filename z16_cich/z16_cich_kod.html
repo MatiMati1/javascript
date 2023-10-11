@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script language="JavaScript">
+			function okno_zamknij()
+			{
+				window.close()
+			}
+		</script>
+    </head>
+    <body>
+        <textarea name="kod" cols="100" rows="50">
+            <html>
+                <head>
+                
+                </head>
+                
+                <body>
+                    <div style="color:darkblue; font-size:16px;">
+                        <script>
+                            var A_cic = prompt("Podaj liczbę:", "");
+                            var a = parseInt(A_cic);
+
+                            var B_cic = prompt("Podaj liczbę:", "");
+                            var b = parseInt(B_cic);
+
+                            document.write("wczytane liczby A=" + a + " B=" + b + "<br>");
+
+                            document.write("(" + a + "+" + b + ")^3 + 3*((" + a + ")^2)*(" + b + ") + 3*(" + a + ")*((" + b + ")^2) + " + b + "^3 = " + (a * a * a) + " + " + (3 * (a * a) * b) + " + " + (3 * a * (b * b)) + " + " + (b * b * b) + " = " + ((a * a * a) + (3 * (a * a) * b) + (3 * a * (b * b)) + (b * b * b)));
+                        </script>
+                    </div>
+                </body>
+            </html>
+        </textarea><br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+    </body>
+</html>

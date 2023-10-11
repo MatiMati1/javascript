@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script language="JavaScript">
+			function okno_zamknij()
+			{
+				window.close()
+			}
+		</script>
+    </head>
+    <body>
+        <textarea name="kod" cols="100" rows="50">
+            <html>
+                <head>
+                
+                </head>
+                <body>
+                    <div style="color:green; font-size:55px;">
+                    <script language="JavaScript">
+                        var D1_cic=prompt("dzień 1 =","");
+                        var G1_cic=prompt("godzina 1 =","");
+                        var D2_cic=prompt("dzień 2 =","");
+                        var G2_cic=prompt("godzina 2 =","");
+
+                        var d1_cic=parseInt(D1_cic);
+                        var d2_cic=parseInt(D2_cic);
+                        var g1_cic=parseInt(G1_cic);
+                        var g2_cic=parseInt(G2_cic);
+
+                        var sekundy;
+                        sekundy = 60*(60*((24-g2_cic)+g1_cic+(24*(d1_cic-(d2_cic+1)))));
+                        document.write("ilośc sekund pomiędzy tymi godzinami w tych dniach wnosi:"+sekundy+".");
+                    </script>
+                    </div>
+                </body>
+            </html>
+        </textarea><br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+    </body>
+</html>
