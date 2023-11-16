@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <script language="JavaScript">
+        function okno_zamknij() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <textarea name="kod" cols="160" rows="58">
+        <!DOCTYPE html>
+        <html>
+        
+        <head>
+        
+        </head>
+        
+        <body style="font-size: 25px; color: red;">
+            <script>
+                var No = parseFloat(prompt("Podaj ilość początkową atomów pierwiastka", ""));
+                var t = parseFloat(prompt("Podaj czas w latach:", ""));
+                var T12 = parseFloat(prompt("Podaj okres połowicznego zaniku", ""));
+
+                var lambda = Math.log(2) / T12;
+                var N = No * Math.exp(-lambda * t);
+
+                document.write("N0=" + No + "[sztuk]<br>");
+                document.write("t=" + t + "[lat]<br>");
+                document.write("T1/2=" + T12 + "[lat]<br>");
+                document.write("Lambda=" + lambda.toFixed(7) + "[1/rok]<br>");
+                document.write("N=" + N.toFixed(7) + "[sztuk]<br>");
+            </script>
+        
+        </body>
+        
+        </html>
+    </textarea><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()" />
+</body>
+
+</html>

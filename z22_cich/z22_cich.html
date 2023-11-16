@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function Pole_cichosz(a,b)
+            {
+                var a_cic = parseFloat(a);
+                var b_cic = parseFloat(b);
+
+                var pole = a_cic*b_cic;
+
+                document.getElementsByName("pole")[0].value=pole.toFixed(2);
+                pole_cic.innerHTML="pole="+pole.toFixed(2)+" cm^3";
+            }
+
+            function obw_cichosz(a,b)
+            {
+                var a_cic = parseFloat(a);
+                var b_cic = parseFloat(b);
+
+                var obw = (a_cic*2)+(b_cic*2);
+
+                document.getElementsByName("obwo")[0].value=obw.toFixed(2);
+                obwo_cic.innerHTML="obwod="+obw.toFixed(2)+" cm";
+            }
+        </script>
+        <form name="formularz" action="..." onsubmit="Pole_cichosz(this.a_dana_cic.value,this.b_dana_cic.value); obw_cichosz(this.a_dana_cic.value,this.b_dana_cic.value);return false">
+            podaj bok a prostokąta 
+            <input size="6" name="a_dana_cic"><br>
+            podaj bok b prostokąta 
+            <input size="6" name="b_dana_cic"><br>
+
+            <input TYPE="submit" Value="oblicz"><br>
+            pole=
+            <input size="6" name="pole"><br>
+            obwód=
+            <input size="6" name="obwo"><br>
+        </form>
+        <table>
+            <tr>
+                <td id="pole_cic"></td>
+            </tr>
+            <tr>
+                <td id="obwo_cic"></td>
+            </tr>
+        </table>
+    </body>
+</html>

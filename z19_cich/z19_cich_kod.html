@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script language="JavaScript">
+			function okno_zamknij()
+			{
+				window.close()
+			}
+		</script>
+    </head>
+    <body>
+        <textarea name="kod" cols="160" rows="58">
+            <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <link rel="stylesheet" href="styl.css">
+                </head>
+                <body>
+                    <script type="text/javascript">
+                        function pole_cic()
+                        {
+                        var a_cic= parseFloat(document.getElementById('dlugosc').value);
+                        var b_cic= a_cic*a_cic;
+                        document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b_cic.toFixed(2)+" cm^2";
+                        }
+                        function obwod_cic()
+                        {
+                        var a_cic= parseFloat(document.getElementById('dlugosc').value);
+                        var b_cic= 4*a_cic;
+                        document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b_cic.toFixed(2)+" cm";
+                        }
+                    </script>
+                    <h1>Wszystko o KWADRACIE</h1><br><br>
+                    Podaj długość boku: <input type="text" id="dlugosc" value=""> cm<br><br><br>
+                    
+                    <input type="button" name="pole" value="Oblicz pole" Onclick="pole_cic()"><br><br>
+
+                    <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_cic()"><br><br>
+
+                    <div style="color:red;font-size:50px;"id="nazwa"></div>
+                </body>
+            </html>
+        </textarea><br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+    </body>
+</html>

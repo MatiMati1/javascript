@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <script language="JavaScript">
+			function okno_zamknij()
+			{
+				window.close()
+			}
+		</script>
+    </head>
+    <body>
+        <textarea name="kod" cols="160" rows="58">
+            <html>
+                <head>
+
+                </head>
+                <body>
+                    <script>
+                        function AB_cic()
+                        {
+                            var xa_cic= parseFloat(document.getElementById('xa').value);
+                            var ya_cic= parseFloat(document.getElementById('ya').value);
+
+                            var xb_cic= parseFloat(document.getElementById('xb').value);
+                            var yb_cic= parseFloat(document.getElementById('yb').value);
+
+                            var wynik_cic = Math.sqrt(Math.pow((xa_cic-xb_cic),2)+Math.pow((ya_cic-yb_cic),2));
+
+                            document.getElementById("name").innerHTML ="Długosć pomiędzy punktami A i B Wynosi: "+wynik_cic.toFixed(2);; 
+                        }
+
+                        function BC_cic()
+                        {
+                            var xb_cic= parseFloat(document.getElementById('xb').value);
+                            var yb_cic= parseFloat(document.getElementById('yb').value);
+
+                            var xc_cic= parseFloat(document.getElementById('xc').value);
+                            var yc_cic= parseFloat(document.getElementById('yc').value);
+
+                            var wynik_cic = Math.sqrt(Math.pow((xb_cic-xc_cic),2)+Math.pow((yb_cic-yc_cic),2));
+
+                            document.getElementById("name").innerHTML ="Długosć pomiędzy punktami B i C Wynosi: "+wynik_cic.toFixed(2);; 
+                        }
+
+                        function AC_cic()
+                        {
+                            var xa_cic= parseFloat(document.getElementById('xa').value);
+                            var ya_cic= parseFloat(document.getElementById('ya').value);
+
+                            var xc_cic= parseFloat(document.getElementById('xc').value);
+                            var yc_cic= parseFloat(document.getElementById('yc').value);
+
+                            var wynik_cic = Math.sqrt(Math.pow((xa_cic-xc_cic),2)+Math.pow((ya_cic-yc_cic),2));
+
+                            document.getElementById("name").innerHTML ="Długosć pomiędzy punktami B i C Wynosi: "+wynik_cic.toFixed(2);; 
+                        }
+                    </script>
+
+                    Podaj x punktu A: <input type="text" id="xa" value=""> cm<br>
+                    Podaj y punktu A: <input type="text" id="ya" value=""> cm<br><br>  
+
+                    Podaj x punktu B: <input type="text" id="xb" value=""> cm<br>  
+                    Podaj y punktu B: <input type="text" id="yb" value=""> cm<br><br>  
+
+                    Podaj x punktu C: <input type="text" id="xc" value=""> cm<br>  
+                    Podaj y punktu C: <input type="text" id="yc" value=""> cm<br><br>  
+
+                    <input type="button" name="dlugosc" value="Oblicz_długość pomiędzy A i B" Onclick="AB_cic()"><br><br>
+                    <input type="button" name="dlugosc" value="Oblicz_długość pomiędzy B i C" Onclick="BC_cic()"><br><br>
+                    <input type="button" name="dlugosc" value="Oblicz_długość pomiędzy A i C" Onclick="AC_cic()"><br><br>
+
+
+                    <div style="font-size: 30px;;" id="name"></div>
+
+                    
+                </body>
+            </html>
+        </textarea><br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+    </body>
+</html>

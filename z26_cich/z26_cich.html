@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        function pow_cichosz() {
+            var gornaPodstawa = parseFloat(document.getElementById("gornaPodstawa"));
+            var dolnaPodstawa = parseFloat(document.getElementById("dolnaPodstawa"));
+            var wysokosc = parseFloat(document.getElementById("wysokosc"));
+
+            var ramie = Math.sqrt(Math.pow((gornaPodstawa - dolnaPodstawa) / 2, 2) + Math.pow(wysokosc, 2));
+            var pole = (gornaPodstawa + dolnaPodstawa) * wysokosc / 2;
+
+            document.getElementById("Pole").value = pole;
+        }
+
+        function obw_cichosz() {
+            var gornaPodstawa = parseFloat(document.getElementById("gornaPodstawa"));
+            var dolnaPodstawa = parseFloat(document.getElementById("dolnaPodstawa"));
+            var wysokosc = parseFloat(document.getElementById("wysokosc"));
+
+            var ramie = Math.sqrt(Math.pow((gornaPodstawa - dolnaPodstawa) / 2, 2) + Math.pow(wysokosc, 2));
+            var obwod = gornaPodstawa + dolnaPodstawa + 2 * ramie;
+
+            document.getElementById("Obwod").value = obwod;
+        }
+    </script>
+    <h2>Obliczenia Trapezu Równoramiennego</h2>
+    <form>
+        Górna podstawa: <input type="text" id="gornaPodstawa"><br>
+        Dolna podstawa: <input type="text" id="dolnaPodstawa"><br>
+        Wysokość: <input type="text" id="wysokosc"><br>
+
+        <input type="button" value="Oblicz" onclick="pow_cichosz();obw_cichosz()"><br>
+
+        Pole: <input type="text" id="Pole"><br>
+        Obwod: <input type="text" id="Obwod"><br>
+    </form>
+</body>
+
+</html>

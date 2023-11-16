@@ -1,0 +1,36 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script language="JavaScript">
+            function Obliczenia(d,x)
+            {
+                var D = parseFloat(d);
+                var X = parseFloat(x);
+
+                var wysokoscdrabiny = Math.sqrt((D*D)+(X*X));
+                var Alfa = Math.atan(D/X)*180/Math.PI;
+
+                document.getElementsByName("drab")[0].value=wysokoscdrabiny.toFixed(2);
+                document.getElementsByName("alfa")[0].value=Alfa.toFixed(2);
+            }
+        </script>
+
+        Oblicznie odległości od drabiny i kąta.
+        <br><br>
+        <form name="formularz" action="..." onsubmit="Obliczenia(this.inputd.value,this.inputx.value);return false">
+            Podaj D=
+            <input size="6" name="inputd">
+            Podaj X=
+            <input size="6" name="inputx"><br>
+
+            <input TYPE="submit" value="oblicz"><br>
+
+            Drabina=
+            <input size="6" name="drab">
+            Alfa=
+            <input size="6" name="alfa">
+        </form>
+    </body>
+</html>
