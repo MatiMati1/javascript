@@ -1,0 +1,32 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+	<script type="text/javascript">
+		function mebel(nazwa_cic, szerokosc_cic, wysokosc_cic) {
+			this.nazwa = nazwa_cic;
+			this.szerokosc = szerokosc_cic;
+			this.wysokosc = wysokosc_cic;
+		}
+		mebel.prototype.mebel_pokaz_cichosz = function () {
+			alert(this.nazwa + " " + this.szerokosc + ' ' + this.wysokosc);
+		}
+
+		let mebel1 = new mebel("mini szafa", "40cm", "75cm");
+		let mebel2 = new mebel("szafa premium", "65cm", "195cm");
+		let mebel3 = new mebel("szafa standard", "55cm", "185cm");
+
+		mebel1.mebel_pokaz_cichosz();
+		mebel2.mebel_pokaz_cichosz();
+		mebel3.mebel_pokaz_cichosz();
+		document.write("dostęp do właściwości" + "<br>");
+		document.write("mebel pierwszy" + " " + mebel1.nazwa + " " + mebel1.szerokosc + " " + mebel1.wysokosc + "<br>");
+		document.write("mebel drógi" + " " + mebel2.nazwa + " " + mebel2.szerokosc + " " + mebel2.wysokosc + "<br>");
+		document.write("mebel trzeci" + " " + mebel3.nazwa + " " + mebel3.szerokosc + " " + mebel3.wysokosc + "<br>");
+	</script>
+</body>
+
+</html>

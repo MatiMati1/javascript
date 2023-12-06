@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script language="JavaScript">
+        function okno_zamknij() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <textarea name="kod" cols="160" rows="58">
+        <html>
+            <head>
+
+            </head>
+            <body>
+                <script type="text/javascript">
+                    var mebel = {
+                    rodzaj: 'szafka',
+                    nazwa_modelu: 'szafa biurowa szara',
+                    wysokosc: '200cm',
+                    mebel_wyswietl_cichosz: function ()
+                        {
+                            document.write(this.rodzaj + ' ' + this.nazwa_modelu + ' ' + this.wysokosc);
+                        }
+                    }
+                    mebel.mebel_wyswietl_cichosz();
+                    mebel.szerokosc=70;
+                    mebel.mebel_pokaz_cichosz=function() {alert('szerokosc:' + this.szerokosc + 'cm')}
+                    mebel.mebel_pokaz_cichosz();
+                </script>
+            </body> 
+        </html>
+    </textarea><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()" />
+</body>
+
+</html>
